@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Background from './chad-montano-MqT0asuoIcU-unsplash.jpg'
+import MultiselectOptions from './Components/MultiselectOptions'
 
 import ChatBot from 'react-simple-chatbot';
 
@@ -33,13 +34,20 @@ const steps = [
     {
         id: '5',
         options: [
-            { value:1, label: 'Margherita', trigger: '6'},
-            { value:2, label: 'Marinara', trigger: '6'},
+            { value:1, label: 'Margherita', trigger: 'toppings'},
+            { value:2, label: 'Marinara', trigger: 'toppings'},
         ],
     },
     {
+        id: 'toppings',
+        component: <MultiselectOptions options ={['Onions', 'Cheese']}/>,
+        waitAction: true,
+        asMessage: true,
+        trigger:'6'
+    },
+    {
         id: '6',
-        message: 'Your Order wll be ready in 20 mins',
+        message: `Your {previousValue} Order wll be ready in 20 mins`,
         trigger: '3'
     },
     {
@@ -61,7 +69,7 @@ const steps = [
 
 ReactDOM.render(
     <div>
-        <img src={ Background } style = {{height: "100%", width: "100%"}}/>
+        <img src={ Background }/>
         <ChatBot steps={steps}
             floating={true}
             floatingStyle={{
@@ -70,6 +78,7 @@ ReactDOM.render(
                 transformOrigin: 'bottom center',
                 borderRadius: 0,
             }}
+            botDelay={0}
             style={{
                 left: 'calc(80% - 125px)',
             }} />
