@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/YoYo/static/css/main.d1b05096.chunk.css",
+    "main.js": "/YoYo/static/js/main.5085f70e.chunk.js",
+    "main.js.map": "/YoYo/static/js/main.5085f70e.chunk.js.map",
+    "runtime-main.js": "/YoYo/static/js/runtime-main.8b7d7f95.js",
+    "runtime-main.js.map": "/YoYo/static/js/runtime-main.8b7d7f95.js.map",
+    "static/js/2.162b509e.chunk.js": "/YoYo/static/js/2.162b509e.chunk.js",
+    "static/js/2.162b509e.chunk.js.map": "/YoYo/static/js/2.162b509e.chunk.js.map",
+    "index.html": "/YoYo/index.html",
+    "precache-manifest.9cfa23cb39c57f925365a9ddcdc62cba.js": "/YoYo/precache-manifest.9cfa23cb39c57f925365a9ddcdc62cba.js",
+    "service-worker.js": "/YoYo/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/YoYo/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.162b509e.chunk.js.LICENSE.txt": "/YoYo/static/js/2.162b509e.chunk.js.LICENSE.txt",
+    "static/media/chad-montano-MqT0asuoIcU-unsplash.jpg": "/YoYo/static/media/chad-montano-MqT0asuoIcU-unsplash.cc7a458d.jpg",
+    "static/media/logo.svg": "/YoYo/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8b7d7f95.js",
+    "static/js/2.162b509e.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.5085f70e.chunk.js"
+  ]
+}
