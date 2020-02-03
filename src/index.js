@@ -5,6 +5,8 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Background from './chad-montano-MqT0asuoIcU-unsplash.jpg'
 import MultiselectOptions from './Components/MultiselectOptions'
+import Review from './Components/Review'
+import ValidateName from './Components/ValidateName'
 
 import ChatBot from 'react-simple-chatbot';
 
@@ -29,26 +31,71 @@ const steps = [
     {
         id: '4',
         message: 'What you want? We have...',
-        trigger: '5',
+        trigger: 'pizza',
     },
     {
-        id: '5',
+        id: 'pizza',
         options: [
-            { value:1, label: 'Margherita', trigger: 'toppings'},
+            { value:'Margherita', label: 'Margherita', trigger: 'toppings'},
             { value:2, label: 'Marinara', trigger: 'toppings'},
         ],
     },
     {
         id: 'toppings',
-        component: <MultiselectOptions options ={['Onions', 'Cheese']}/>,
+        component: <MultiselectOptions options ={['Onions', 'Cheese', 'Peppers', 'Olives', 'Pineapple', 'Chicken', 'Tofu']}/>,
         waitAction: true,
         asMessage: true,
         trigger:'6'
     },
     {
         id: '6',
-        message: `Your {previousValue} Order wll be ready in 20 mins`,
-        trigger: '3'
+        message: `Your Order will be ready in 20 mins`,
+        trigger: '7'
+    },
+    {
+        id: '7',
+        message:'May I get your Name?',
+        trigger: 'name'
+    },
+    {
+        id: 'name',
+        user: true,
+        trigger: 'validatename'
+    },
+    {
+        id: "validatename",
+        component: <ValidateName />,
+        waitAction: true,
+        asMessage: true,
+        trigger: '8'
+    },
+    {
+        id: '8',
+        message: "And your Phone No.",
+        trigger: "pno"
+    },
+    {
+        id:"pno",
+        user:true,
+        validator: (value) => {
+            let pno = /^\d{10}$/;
+            if(value.match(pno)) {
+                return true
+            }
+            return "Please provide a valid Phone No."
+        },
+        trigger: 'review'
+    },
+    {
+        id:"review",
+        component: <Review />,
+        asMessage: true,
+        trigger: 'gen_id'
+    },
+    {
+        id:"gen_id",
+        message: "Your Order ID is 123123123",
+        trigger:'3'
     },
     {
         id: '10',
@@ -68,20 +115,22 @@ const steps = [
 ];
 
 ReactDOM.render(
-    <div>
-        <img src={ Background }/>
+    <div style = {{ position:"absolute",top:0,bottom:0, left:0,right:0, backgroundImage: `url(${Background})`}}>
+        <h1 style={{color: "white", paddingLeft: 20, paddingTop:20, fontSize: 60}}>yoYO Pizza</h1>
+        <h3 style={{color: "white", paddingLeft: 20}}>Pizza that tastes as good as it looks.</h3>
         <ChatBot steps={steps}
             floating={true}
             floatingStyle={{
                 left: 'calc(100% - 80px)',
                 right: 'initial',
-                transformOrigin: 'bottom center',
+                transformOrigin: 'bottom right',
                 borderRadius: 0,
             }}
-            botDelay={0}
+            botDelay={10}
             style={{
                 left: 'calc(80% - 125px)',
-            }} />
+            }}
+             />
     </div>,
     document.getElementById('root')
 );
