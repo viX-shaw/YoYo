@@ -16,7 +16,21 @@ class Review extends Component {
         const { steps } = this.props;
         const { name, pno, pizza, toppings } = steps;
 
-        this.setState({ name, pno, pizza, toppings });
+        this.setState({ name, pno, pizza, toppings }, ()=>{
+            fetch("https://yoyopizza.herokuapp.com/addOrder/", {
+                method: 'post',
+                body:JSON.stringify({
+                    name: this.state.name.value,
+                    pno: this.state.pno.value,
+                    pizza: this.state.pizza.value,
+                    toppings:this.state.toppings.value
+                })
+            }).then(res=>res.json())
+            .then(result=>{
+                console.log(result)
+                this.props.triggerNextStep({trigger: 'gen_id', value: result.orderID})
+            })
+        });
     }
 
     render() {

@@ -43,7 +43,7 @@ class MultiselectOptions extends Component {
     }
 
     render() {
-        console.log(this.state)
+        // console.log(this.state)
         const { options } = this.state;
         return (
             !this.state.showChosenItems?

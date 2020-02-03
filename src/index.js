@@ -7,6 +7,7 @@ import Background from './chad-montano-MqT0asuoIcU-unsplash.jpg'
 import MultiselectOptions from './Components/MultiselectOptions'
 import Review from './Components/Review'
 import ValidateName from './Components/ValidateName'
+import OrderStatus from './Components/OrderStatus'
 
 import ChatBot from 'react-simple-chatbot';
 
@@ -37,7 +38,7 @@ const steps = [
         id: 'pizza',
         options: [
             { value:'Margherita', label: 'Margherita', trigger: 'toppings'},
-            { value:2, label: 'Marinara', trigger: 'toppings'},
+            { value:'Marinara', label: 'Marinara', trigger: 'toppings'},
         ],
     },
     {
@@ -90,26 +91,29 @@ const steps = [
         id:"review",
         component: <Review />,
         asMessage: true,
+        waitAction: true,
         trigger: 'gen_id'
     },
     {
         id:"gen_id",
-        message: "Your Order ID is 123123123",
+        message: "Your Order ID is {previousValue}",
         trigger:'3'
     },
     {
         id: '10',
         message: 'Enter you Order ID',
-        trigger: '11'
+        trigger: 'orderID'
     },
     {
-        id :'11',
+        id :'orderID',
         user: true,
         trigger: '12'
     },
     {
         id: '12',
-        message: "You have been served, LMAO that's funny",
+        component: <OrderStatus />,
+        asMessage: true,
+        waitAction: true,
         trigger: '3'
     }
 ];
@@ -126,7 +130,7 @@ ReactDOM.render(
                 transformOrigin: 'bottom right',
                 borderRadius: 0,
             }}
-            botDelay={10}
+            userDelay={1000}
             style={{
                 left: 'calc(80% - 125px)',
             }}
