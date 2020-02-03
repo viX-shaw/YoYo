@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "054c4785506aae1661efadadd5045cf6",
+    "revision": "2b13a467424a88cd2f6fc94cedf94b3d",
     "url": "/YoYo/index.html"
   },
   {
-    "revision": "2b1ab69b835dd5bc05d5",
+    "revision": "51f0e3e21c94944f6ace",
     "url": "/YoYo/static/css/main.d1b05096.chunk.css"
   },
   {
-    "revision": "fb6459c866fadb4aadda",
-    "url": "/YoYo/static/js/2.162b509e.chunk.js"
+    "revision": "9947e9fcd6492c12c8b7",
+    "url": "/YoYo/static/js/2.149a83e3.chunk.js"
   },
   {
-    "revision": "928d7b5eb39d16fe9a880722c974b51e",
-    "url": "/YoYo/static/js/2.162b509e.chunk.js.LICENSE.txt"
+    "revision": "21ca39bc8930bd54aa4679485b043104",
+    "url": "/YoYo/static/js/2.149a83e3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2b1ab69b835dd5bc05d5",
-    "url": "/YoYo/static/js/main.890f38c7.chunk.js"
+    "revision": "51f0e3e21c94944f6ace",
+    "url": "/YoYo/static/js/main.8ce72523.chunk.js"
   },
   {
     "revision": "bfc791891f4dea782bf3",
