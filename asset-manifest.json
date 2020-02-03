@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/YoYo/static/css/main.d1b05096.chunk.css",
-    "main.js": "/YoYo/static/js/main.5085f70e.chunk.js",
-    "main.js.map": "/YoYo/static/js/main.5085f70e.chunk.js.map",
+    "main.js": "/YoYo/static/js/main.890f38c7.chunk.js",
+    "main.js.map": "/YoYo/static/js/main.890f38c7.chunk.js.map",
     "runtime-main.js": "/YoYo/static/js/runtime-main.8b7d7f95.js",
     "runtime-main.js.map": "/YoYo/static/js/runtime-main.8b7d7f95.js.map",
     "static/js/2.162b509e.chunk.js": "/YoYo/static/js/2.162b509e.chunk.js",
     "static/js/2.162b509e.chunk.js.map": "/YoYo/static/js/2.162b509e.chunk.js.map",
     "index.html": "/YoYo/index.html",
-    "precache-manifest.9cfa23cb39c57f925365a9ddcdc62cba.js": "/YoYo/precache-manifest.9cfa23cb39c57f925365a9ddcdc62cba.js",
+    "precache-manifest.95adb33aa0fd22aea707830306e12bf7.js": "/YoYo/precache-manifest.95adb33aa0fd22aea707830306e12bf7.js",
     "service-worker.js": "/YoYo/service-worker.js",
     "static/css/main.d1b05096.chunk.css.map": "/YoYo/static/css/main.d1b05096.chunk.css.map",
     "static/js/2.162b509e.chunk.js.LICENSE.txt": "/YoYo/static/js/2.162b509e.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.8b7d7f95.js",
     "static/js/2.162b509e.chunk.js",
     "static/css/main.d1b05096.chunk.css",
-    "static/js/main.5085f70e.chunk.js"
+    "static/js/main.890f38c7.chunk.js"
   ]
 }

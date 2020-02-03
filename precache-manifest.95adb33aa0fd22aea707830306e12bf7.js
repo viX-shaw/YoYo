@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "04121c280acbd95a78d5d0b5d80d9cd7",
+    "revision": "054c4785506aae1661efadadd5045cf6",
     "url": "/YoYo/index.html"
   },
   {
-    "revision": "6ee91e1e75abb0cc75f2",
+    "revision": "2b1ab69b835dd5bc05d5",
     "url": "/YoYo/static/css/main.d1b05096.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/YoYo/static/js/2.162b509e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6ee91e1e75abb0cc75f2",
-    "url": "/YoYo/static/js/main.5085f70e.chunk.js"
+    "revision": "2b1ab69b835dd5bc05d5",
+    "url": "/YoYo/static/js/main.890f38c7.chunk.js"
   },
   {
     "revision": "bfc791891f4dea782bf3",
